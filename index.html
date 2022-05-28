@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery</title>
+  </head>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      min-height: 100vh;
+      background: #434750;
+    }
+    ul {
+      margin-top: 80px;
+      position: relative;
+      transform: skewY(-15deg);
+      transition: 0.5s;
+    }
+    ul li {
+      position: relative;
+      list-style-type: none;
+      width: 600px;
+      background: #3e3f46;
+      padding: 15px;
+    }
+    ul li :hover {
+      background: #33a3ee;
+      transform: translateX(-50px);
+    }
+    ul li::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -40px;
+      width: 40px;
+      height: 100%;
+      background: #2e3133;
+      transform-origin: right;
+      transform: skewY(45deg);
+      transition: 0.5s;
+    }
+
+    ul li a {
+      text-decoration: none;
+      color: #999;
+      display: block;
+    }
+    ul li a:hover {
+      color: #fff;
+      padding: 10px;
+    }
+  </style>
+
+  <body>
+    <div>
+      <ul class="list-group"></ul>
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
